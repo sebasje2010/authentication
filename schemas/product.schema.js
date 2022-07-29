@@ -2,13 +2,13 @@ const Joi = require('joi');
 
 const id = Joi.number().integer();
 const name = Joi.string().min(3).max(15);
-const price = Joi.number().integer().min(10);
+const price = Joi.number().min(.1);
 const description = Joi.string().min(10);
 const image = Joi.string().uri();
 const categoryId = Joi.number().integer();
 
-const price_min = Joi.number().integer();
-const price_max = Joi.number().integer();
+const price_min = Joi.number();
+const price_max = Joi.number();
 
 const limit = Joi.number().integer();
 const offset = Joi.number().integer();

@@ -10,8 +10,6 @@ const router = express.Router();
 const service = new CategoryService();
 
 router.get('/',
-passport.authenticate('jwt', { session: false }),
-checkRoles('admin', 'user', 'customer'),
  async (req, res, next) => {
   try {
     const categories = await service.find();
@@ -22,8 +20,6 @@ checkRoles('admin', 'user', 'customer'),
 });
 
 router.get('/:id',
-passport.authenticate('jwt', { session: false }),
-checkRoles('admin', 'user', 'customer'),
   validatorHandler(getCategorySchema, 'params'),
   async (req, res, next) => {
     try {
