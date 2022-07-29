@@ -7,6 +7,8 @@ const config = {
   dbUrl: process.env.DATABASE_URL,
   apiKey: process.env.API_KEY,
   jwtSecret: process.env.JWT_SECRET,
+  emailuser: process.env.EMAIL_USER,
+  emailpass: process.env.EMAIL_PASS,
 }
 
 module.exports = { config };
